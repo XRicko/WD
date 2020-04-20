@@ -1,0 +1,128 @@
+$main-color:rgb(224,251,171);
+$nav-link-color:rgb(218,251,171);
+$df-fcolor: white;
+
+@import "normalize";
+
+body {
+    font-family: 'Montserrat Alternates', sans-serif;
+    color: $df-fcolor;
+}
+
+.header {
+    background-image: url("../images/band.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center 40%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    @media screen and (max-width: 600px) {
+        background-image: url("../images/band-blur.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center 40%;
+    }
+}
+
+.nav {
+    background: rgba(0, 0, 0, 0.5);
+    text-align: center;
+    width: 100%;
+}
+
+.navigation {
+    &__list {
+        margin: 0;
+        padding: 0;
+        float: none;
+        list-style: none;
+
+        &-link {
+            text-decoration: none;
+            color: white;
+            transition: all 0.3s ease;
+
+            &:hover {
+                color: $nav-link-color;
+            }
+        }
+
+        &-item {
+            line-height: 60px;
+            display: inline-block;
+            font-size: 1.1rem;
+            padding: 0px 30px;
+            cursor: pointer;
+
+            @media screen and (max-width: 600px) {
+                font-size: 0.7em;
+                padding: 0px 8px;
+            }
+        }
+    }
+}
+
+.welcoming {
+    height: 100%;
+    max-width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0 10px;
+
+    h1 {
+        font-size: 2.2em;
+        text-align: center;
+        margin: 0;
+        word-break: break-word;
+    } 
+
+    h2 {
+        font-size: 1.4em;
+        text-align: center;
+        color: $main-color;
+        word-break: break-word;
+    }
+
+    &-wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        .active {
+            display: inline-block;
+            margin: 0 auto;
+            border: solid 3px white;
+            background-color: transparent;
+            color: white;
+            padding: 10px 25px;
+            font-size: 1.1em;
+            text-decoration: none;
+            transition: all 0.2s ease;
+
+            &:hover {
+                transform: scale(1.01);
+                border: solid 3px $main-color;
+                color: $main-color;
+            }
+        }
+    }
+}
+
+.footer {
+    background-color: black;
+    text-align: end;
+
+    &-text {
+        font-size: 0.7em;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+
+}
