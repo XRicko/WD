@@ -1,0 +1,93 @@
+body {
+  font-family: "Montserrat Alternates", sans-serif;
+  color: white;
+}
+
+.header {
+  background-image: url(../images/band.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center 40%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.nav {
+  background: rgba(0, 0, 0, 0.5);
+  text-align: center;
+  width: 100%;
+}
+
+.navigation__list {
+  margin: 0;
+  float: none;
+  list-style: none;
+}
+.navigation__list-link {
+  text-decoration: none;
+  color: white;
+}
+.navigation__list-link:hover {
+  color: #dafbab;
+}
+.navigation__list-item {
+  line-height: 60px;
+  display: inline-block;
+  font-size: 1.1rem;
+  padding: 0px 30px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.navigation__list-item:hover {
+  transform: rotate(-45deg);
+}
+
+.welcoming {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  margin: 0;
+}
+.welcoming h1 {
+  font-size: 2.2em;
+  margin: 0;
+}
+.welcoming h2 {
+  font-size: 1.4em;
+  color: #e0fbab;
+}
+.welcoming-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.welcoming-wrapper .active {
+  display: inline-block;
+  margin: 0 auto;
+  border: solid 3px white;
+  background-color: transparent;
+  color: white;
+  padding: 10px 25px;
+  font-size: 1.1em;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+.welcoming-wrapper .active:hover {
+  transform: scale(1.05);
+  border: solid 3px #e0fbab;
+  color: #e0fbab;
+}
+
+.footer {
+  background-color: black;
+  text-align: end;
+}
+.footer-text {
+  font-size: 0.7em;
+}
+
+/*# sourceMappingURL=index.css.map */

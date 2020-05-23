@@ -6,12 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates&display=swap" rel="stylesheet">   
     <link href="css/style.css" rel="stylesheet">
-    <title>Якийсь гурт</title>
+    <title>Гурт</title>
 </head>
 
 <body>
 
     <header class="header">
+        
         <div class="nav">
             <nav class="navigation">
                 <ul class="navigation__list">
@@ -44,10 +45,12 @@
     </main>
 
     <footer class="footer">
+        <script src="JS/validation.js"></script>
+
         <div class="subscribe">
             <p class="subscribe-text">Дізнавайтеся перші про всі наші оновлення</p>
-            <form class="subscribe-form">
-                <input class="subscribe-email" type="email" name="email" placeholder="Введіть свою електрону пошту" required>
+            <form novalidate class="subscribe-form">
+                <input class="subscribe-email" id="mail" type="email" name="mail" placeholder="Введіть свою електрону пошту" required>
                 <input class="subscribe-button" type="submit" value="Підписатися">
             </form>
         </div>
@@ -60,6 +63,7 @@
                 <span class="contacts-text-phone">Телефон: +380xx0000000</span>
             </p>
         </div>
+
     </footer>
 </body>
 </html>
