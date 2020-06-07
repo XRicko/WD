@@ -1,0 +1,210 @@
+.header {
+    @include set-bg("../images/band.png");
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    @media screen and (max-width: 600px) {
+        height: 80vh;
+    }
+
+    @media screen and (max-width: 480px) {
+        height: 50vh;
+    }
+}
+
+.nav {
+    position: relative;
+    display: flex;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.5);
+    width: 100%;
+
+    &__hamburger {
+        z-index: 2;
+        position: absolute;
+        cursor: pointer;
+        right: 2%;
+        top: 50%;
+        transform: translate(-5%, -50%);
+
+        .line {
+            @media screen and (max-width: 768px) {
+                width: 25px;
+                height: 1.3px;
+                background: white;
+                margin: 5px;
+            }
+        }
+    }
+}
+
+.navigation {
+    width: 70%;
+
+    @media screen and (max-width: 768px) {
+        z-index: 1;
+        position: fixed;
+        background: $bg-content-color;
+        height: 100vh;
+        width: 100%;
+        top: 0;
+        bottom: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        clip-path: circle(1px at 91.5% 4.5%);
+        transition: all 1s ease-out;
+
+        &.open {
+            clip-path: circle(1100px at 90% -20%);
+        }
+    }
+
+    &__list {
+        margin: 0 70px 0 35px;
+        padding: 0;
+        float: none;
+        list-style: none;
+        display: flex;
+        justify-content: space-between;
+
+        @media screen and (max-width: 768px) {
+            flex-direction: column;
+            align-items: center;
+        }
+
+        &-link {
+            @include set-link-none();
+            word-break: break-word;
+
+            cursor: pointer;
+            transition: all 0.5s ease;
+
+            &:hover {
+                color: $nav-link-color;
+            }
+        }
+
+        &-item {
+            line-height: 50px;
+
+            @media screen and (max-width: 768px) {
+                &:not(:last-child) {
+                    margin-bottom: 40px;
+                }
+
+                font-size: 1.5em;
+            }
+        }
+    }
+}
+
+.social-buttons {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    width: 30%;
+
+    @media screen and (max-width: 768px) {
+        width: 80%;
+        margin: 12px 0;
+    }
+
+    @media screen and (max-width: 580px) {
+        margin: 10px 0;
+    }
+
+    .fab {
+        @include set-link-none();
+
+        @media screen and (max-width: 580px) {
+            font-size: 0.8em;
+        }
+    }
+
+    .fa-spotify {
+        @include hover-social-btn(#1db954);
+    }
+
+    .fa-bandcamp {
+        @include hover-social-btn(#629aa9);
+    }
+
+    .fa-soundcloud {
+        @include hover-social-btn(#ff6900);
+    }
+
+    .fa-facebook-f {
+        @include hover-social-btn(#4267b2);
+    }
+
+    .fa-youtube {
+        @include hover-social-btn(#ff0000);
+    }
+
+    .fa-instagram {
+        @include hover-social-btn(#e1306c);
+    }
+}
+
+.welcoming {
+    height: 100%;
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    padding: 0 10px;
+
+    h1 {
+        font-size: 3em;
+        text-align: center;
+        margin: 0;
+        word-break: break-word;
+
+        @media screen and (max-width: 580px) {
+            font-size: 2em;
+        }
+    }
+
+    h2 {
+        font-size: 1.7em;
+        text-align: center;
+        color: $main-color;
+        word-break: break-word;
+
+        @media screen and (max-width: 600px) {
+            font-size: 1em;
+        }
+    }
+
+    &__wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        .active {
+            @include set-link-none();
+
+            display: inline-block;
+            margin: 0 auto;
+            border: solid $border-w white;
+            background-color: transparent;
+            padding: 10px 25px;
+            font-size: 1.3em;
+            word-break: break-word;
+
+            @include hover-btn();
+
+            @media screen and (max-width: 580px) {
+                font-size: 1em;
+            }
+        }
+    }
+}

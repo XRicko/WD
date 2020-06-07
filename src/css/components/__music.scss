@@ -1,0 +1,19 @@
+.music {
+    @include set-bg("../images/band1.png");
+    
+    background-color: rgba($color: #000000, $alpha: 0.35);
+    background-blend-mode: darken;
+
+    height: max-content;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    padding: 50px 25px;
+
+    &__title {
+        text-align: center;
+    }
+}

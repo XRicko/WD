@@ -4,66 +4,56 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates&display=swap" rel="stylesheet">   
+    
     <link href="css/style.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates&display=swap" rel="stylesheet">
+
+    <link rel="apple-touch-icon" sizes="57x57" href="images/favicon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="images/favicon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="images/favicon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="images/favicon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="images/favicon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="images/favicon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="images/favicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="images/favicon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="images/favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="images/favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png">
+
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+
+    <script src="https://kit.fontawesome.com/ea8fdfcf8b.js" crossorigin="anonymous"></script>
     <title>Гурт</title>
 </head>
 
 <body>
 
-    <header class="header">
-        
-        <div class="nav">
-            <nav class="navigation">
-                <ul class="navigation__list">
-                    <li class="navigation__list-item"> <a class="navigation__list-link" href="">Головна</a></li>
-                    <li class="navigation__list-item"> <a class="navigation__list-link" href="">Афіша</a></li>
-                    <li class="navigation__list-item"> <a class="navigation__list-link" href="">Музика</a></li>
-                    <li class="navigation__list-item"> <a class="navigation__list-link" href="">Новини</a></li>
-                    <li class="navigation__list-item"><a class="navigation__list-link" href="">Зв'язок</a></li>
-                </ul>
-            </nav>
-        </div>
-
-        <div class="welcoming">
-            <div class="welcoming-wrapper">
-                <h1>Альбом Альбом</h1>
-                <h2>Новий альбом від гурту Гурт</h2>
-    
-                <div class="welcoming-button">
-                    <a href="#" class="active">Уже доступно</a>
-                </div>
-            </div>
-        </div>
-
-    </header>
+    //= templates/header.html
 
     <main>
-        <section class="concerts">
-            <p class="warning">Розділ у розробці</p>
-        </section>
+        //= templates/concerts.html
+        //= templates/music.html
+        //= templates/news.html
     </main>
 
-    <footer class="footer">
-        <script src="JS/validation.js"></script>
-
-        <div class="subscribe">
-            <p class="subscribe-text">Дізнавайтеся перші про всі наші оновлення</p>
-            <form novalidate class="subscribe-form">
-                <input class="subscribe-email" id="mail" type="email" name="mail" placeholder="Введіть свою електрону пошту" required>
-                <input class="subscribe-button" type="submit" value="Підписатися">
-            </form>
-        </div>
-        
-        <div class="contacts">
-            <p class="contacts-header">Наші контакти</p>
-            <p class="contacts-text">
-                <span class="contacts-text-email">Email: bandname@somemail.com</span>
-                <span class="contacts-text-separator">|</span>
-                <span class="contacts-text-phone">Телефон: +380xx0000000</span>
-            </p>
-        </div>
-
+    <footer class="footer" id="contacts">
+        //= templates/footer.html
     </footer>
+
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
+    <script type="text/javascript" src="js/navigation.js"></script>
+    <script type="text/javascript" src="js/slider.js"></script>
+    <script type="text/javascript" src="js/validation.js"></script>
+    <script type="text/javascript" src="js/alertion.js"></script>
+    
 </body>
+
 </html>

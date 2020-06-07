@@ -1,0 +1,80 @@
+.concerts {
+    background-color: $bg-content-color;
+    height: max-content;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 50px 0;
+
+    &__title {
+        text-align: left;
+        word-break: break-word;
+
+        @media screen and (max-width: 950px) {
+            text-align: center;
+        }
+    }
+
+    &__list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+
+        &-item {
+            display: flex;
+            justify-content: space-between;
+
+            @media screen and (min-width: 950px) {
+                flex-direction: row;
+
+                &:not(:last-child) {
+                    border-bottom: 3px solid white;
+                }
+            }
+
+            flex-direction: column;
+            align-items: center;
+            padding-bottom: 15px;
+            margin-bottom: 15px;
+
+            &--wrapper {
+                display: flex;
+                flex-wrap: wrap;
+            }
+
+            &--text {
+                font-size: 1.7em;
+                text-align: center;
+                word-break: break-word;
+                padding: 0 10px;
+
+                @media screen and (max-width: 580px) {
+                    font-size: 1em;
+                }
+
+                &:not(:last-child) {
+                    border-right: 1.5px solid white;
+                }
+            }
+
+            &--button {
+                @include set-link-none();
+                margin-left: 150px;
+                font-size: 1.3em;
+                border: $border-w solid white;
+                padding: 10px 30px;
+                word-break: break-word;
+
+                @include hover-btn();
+
+                @media screen and (max-width: 950px) {
+                    margin: 0;
+                    padding: 10px 0;
+                    width: 50%;
+                    text-align: center;
+                    font-size: 1em;
+                }
+            }
+        }
+    }
+}
