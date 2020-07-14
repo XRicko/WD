@@ -56,7 +56,7 @@
         align-items: center;
         justify-content: center;
 
-        clip-path: circle(1px at 91.5% 4.5%);
+        clip-path: circle(1px at 95.5% 3%);
         transition: all 1s ease-out;
 
         &.open {
@@ -75,6 +75,7 @@
         @media screen and (max-width: 768px) {
             flex-direction: column;
             align-items: center;
+            margin: 0;
         }
 
         &-link {
